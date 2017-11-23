@@ -54,9 +54,11 @@ Command2 = Button(root, text=u'确认', command=Save,font=(u'幼圆',14,'bold'),
 
 Command2.place(relx=0.725, rely=0.532, relwidth=0.217, relheight=0.377)
 '''
-待完成功能：回车与确认按键绑定
+完成功能：回车与确认按键绑定
+原来思路完全错了，绑定确认按钮和回车键，最终都是为了使用Save函数的功能而已。
+之前一直让回车<Return>事件与按钮绑定，这样当回车时，焦点必须在确认按钮才有效。
+但是因为需要调用的是Save函数，所以，只需要把事件绑定到根窗口上就可以了。^_^
 '''
-Command2.bind('<Return>',Save)
-Command2.focus_set()
+root.bind('<Return>',Save)
 
 root.mainloop()

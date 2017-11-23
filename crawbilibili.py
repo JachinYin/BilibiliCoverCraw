@@ -15,10 +15,3 @@ def saveImg(av,path):
     f = open(path + r'\%s.%s'%(av,htaf[1]),'wb')
     f.write(urllib.urlopen(htaf[0]).read())
     f.close()
-
-'''
-av = 13860632
-#saveImg(av,r'E://%s.png' %av)
-
-print getHttp(av)
-'''
